@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "CODEFORCES Contest Remainder",
-  "description": "This extension reminds you about upcoming CODEFORCES contests",
+  "name": "Codeforces Regular Contest Remainder",
+  "description": "This extension reminds you about upcoming Codeforces contests",
   "version": "1.0",
 
   "browser_action": {

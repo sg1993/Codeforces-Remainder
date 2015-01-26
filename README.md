@@ -7,5 +7,7 @@ Click on the extension icon beside the omnibox to see the upcoming regular conte
 Easy and Simple.
 
 Shibin George
+
 B.Tech CSE(4/4),
+
 NIT Warangal.

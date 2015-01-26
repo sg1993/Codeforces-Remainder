@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+
+  "name": "CODEFORCES Contest Remainder",
+  "description": "This extension reminds you about upcoming CODEFORCES contests",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "codeforces.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "http://codeforces.com/*/"
+  ]
+}

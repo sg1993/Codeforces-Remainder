@@ -21,7 +21,7 @@ function getData(callback, errorCallback) {
       return;
     }
     var results = response.result;
-    var upcomingContests = "Upcoming Codeforces regular contests:\n";
+    var upcomingContests = "Upcoming Codeforces regular contests:\n\n";
     for(i=0;i<results.length;i++){
       if(results[i].phase==="BEFORE"){
         upcomingContests += (i+1) + ")\t"+ "Contest id:\t" + results[i].id;
@@ -43,6 +43,18 @@ function getData(callback, errorCallback) {
           upcomingContests += "\n\n";
         }
         
+      } else if(results[i].phase==="CODING"){
+        var start = results[i].relativeTimeSeconds;
+        var end = results[i].durationSeconds - start;
+        //start += 9000;  //to Indian Standard Time
+        var days = 0;
+        var minutes = Math.floor((start - (hours*3600))/60);
+
+        var hours = Math.floor(start/3600);
+        days = Math.floor(hours/24);
+        upcomingContests += (i+1) + ")\t"+ "Contest id:\t" + results[i].id + "[" + results[i].name + "]";
+        upcomingContests += "\n\tis currently going on, and will end in " + end + " seconds.";
+                
       } else {
         break;
       }
